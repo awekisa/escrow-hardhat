@@ -24,3 +24,8 @@ Compile the contracts using `npx hardhat compile`. The artifacts will be placed 
 
 To run the front-end application run `npm start` from the `/app` directory. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+## Notes
+Added a server for "persistance" of deployed contracts - it's just in memory. Index.js file in the server project should be started with:
+
+nodemon index.js
+
