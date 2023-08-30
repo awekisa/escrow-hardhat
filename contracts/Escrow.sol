@@ -7,11 +7,13 @@ contract Escrow {
 	address public depositor;
 
 	bool public isApproved;
+	uint256 public lockedValue;
 
 	constructor(address _arbiter, address _beneficiary) payable {
 		arbiter = _arbiter;
 		beneficiary = _beneficiary;
 		depositor = msg.sender;
+		lockedValue = address(this).balance;
 	}
 
 	event Approved(uint);
